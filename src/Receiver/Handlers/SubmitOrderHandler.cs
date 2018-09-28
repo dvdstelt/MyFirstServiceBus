@@ -9,7 +9,7 @@ namespace Sales.Handlers
 {
     public class SubmitOrderHandler : IHandleMessages<SubmitOrder>
     {
-        public Task Handle(SubmitOrder message)
+        public Task Handle(SubmitOrder message, IMessageContext context)
         {
             Console.WriteLine($"Received {nameof(SubmitOrder)} with id {message.Id}");
 

@@ -125,7 +125,7 @@ namespace ServiceBus
 
                 // Invoke the `Handle` method with the parameter
                 var methodInfo = methods.Single();
-                methodInfo.Invoke(handlerInstance, new[] { physicalMessage });
+                methodInfo.Invoke(handlerInstance, new[] { physicalMessage, this as IMessageContext });
             }
         }
 
